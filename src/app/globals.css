@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Poppins:ital@1&display=swap');
 :root {
   --border: #363636;
+  --background: #22223b;
+  --foreground: #4a4e69;
+  --text: #f2e9e4;
+  --light: #c9ada7;
 }
 * {
   box-sizing: border-box;
@@ -12,16 +16,16 @@ body {
   font-family: 'Barlow Condensed', sans-serif;
   font-family: 'Poppins', sans-serif;
   height: 100vh;
-  background: #2A2F4F;
+  background: var(--background);
   font-size: 1.2rem;
-  color: #917FB3;
+  color: var(--text);
 }
 
 header {
   padding: 1rem 4rem;
   width: 100%;
   min-height: 10vh;
-  background: #E5BEEC;
+  background: var(--foreground);
   box-shadow: 0 3px 6px rgba(255, 255, 255, 0.2);
   border-bottom: 2px solid var(--border);
 
@@ -44,14 +48,16 @@ header .input {
 }
 
 .input label {
+  color: var(--text);
   padding: 0.5rem 2rem;
   border-radius: 0.5rem;
   border: 2px solid var(--border);
   cursor: pointer;
-  background-color: #2A2F4F;
+  background-color: var(--background);
 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
 }
+
