@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import styles from '../app/page.module.css'
 
-export default function ListItem() {
+const copy = <i className="far fa-copy"></i>
+
+export default function ListItem( {rgb, hex}) {
+  const {copied, setCopied} = useState(false);
+
   return (
-    <div>ListItem</div>
+    <li className={styles.color} style={ {background: rgb }}>
+      <span>{copied ? "Copied!" : hex} {copy}</span>
+    </li>
   )
 }

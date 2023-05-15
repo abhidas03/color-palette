@@ -1,9 +1,10 @@
 "use client"
 import styles from './page.module.css'
 import ImageDisplay from '@/components/imageDisplay'
+import ColorDisplay from '@/components/colorDisplay'
 import ColorThief from 'colorthief'
 import { useState } from 'react'
-
+import Head from 'next/head'
 
 export default function Home() {
 
@@ -20,6 +21,7 @@ export default function Home() {
       img.onload = () => {
         const colorThief = new ColorThief();
         const colorPalette = colorThief.getPalette(img, 6);
+        console.log(colorPalette);
         setUploadedImage(event.target.result);
         setColorPalette(colorPalette);
       }
@@ -30,8 +32,6 @@ export default function Home() {
   return (
     <>
       <header>
-      
-      
         <h1>Palette Generator</h1>
         <div className='input'>
           <label htmlFor='file'>Upload your Image</label>
@@ -40,6 +40,7 @@ export default function Home() {
       </header>
       <main className={styles.main}>
         <ImageDisplay uploadedImage={uploadedImage} colorPalette={colorPalette}/>
+        <ColorDisplay colorPalette={colorPalette}/>
       </main>
     </>
 

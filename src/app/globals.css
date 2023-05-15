@@ -22,8 +22,8 @@ body {
 }
 
 header {
-  padding: 1rem 4rem;
   width: 100%;
+  padding: 1rem 4rem;
   min-height: 10vh;
   background: var(--foreground);
   box-shadow: 0 3px 6px rgba(255, 255, 255, 0.2);
@@ -61,3 +61,7 @@ header .input {
   gap: 1rem;
 }
 
+.paletteColor {
+  width: 20rem;
+  height: 20rem;
+}
