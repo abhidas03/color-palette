@@ -72,8 +72,9 @@
 }
 
 .color {
-  width: 10rem;
-  height: 10rem;
+  font-size: 15px;
+  width: 8rem;
+  height: 8rem;
   padding: 5px;
   margin: 0.5rem;
   border-radius: 20px;
