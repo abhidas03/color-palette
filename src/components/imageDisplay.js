@@ -1,5 +1,5 @@
 import styles from '../app/page.module.css'
-export default function ImageDisplay({ uploadedImage, colorPalette }) {
+export default function ImageDisplay({ uploadedImage }) {
     return (
         <>
             <div className={styles.content}>

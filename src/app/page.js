@@ -4,13 +4,13 @@ import ImageDisplay from '@/components/imageDisplay'
 import ColorDisplay from '@/components/colorDisplay'
 import ColorThief from 'colorthief'
 import { useState } from 'react'
-import Head from 'next/head'
 
+const imageIcon = <i className="fa-solid fa-image"></i>
 export default function Home() {
 
   const [uploadedImage, setUploadedImage] = useState(null);
   const [colorPalette, setColorPalette] = useState(null);
-
+  console.log("What you looking here for? 🫥")
   const uploadImage = (e) => {
     const imageFile = e.target.files[0];
     const reader = new FileReader();
@@ -34,12 +34,12 @@ export default function Home() {
       <header>
         <h1>Palette Generator</h1>
         <div className='input'>
-          <label htmlFor='file'>Upload your Image</label>
+          <label htmlFor='file'>{imageIcon} Upload your Image</label>
           <input type='file' id='file' hidden onChange={uploadImage}/>
         </div>
       </header>
       <main className={styles.main}>
-        <ImageDisplay uploadedImage={uploadedImage} colorPalette={colorPalette}/>
+        <ImageDisplay uploadedImage={uploadedImage} />
         <ColorDisplay colorPalette={colorPalette}/>
       </main>
     </>

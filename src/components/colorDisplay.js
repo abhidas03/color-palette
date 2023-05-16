@@ -19,7 +19,7 @@ export default function ColorDisplay( {colorPalette} ) {
                 <ul className={styles.colorList}>
                     {colorPalette.map((color, index) => {
                         const rgb = `rgb(${color.join(",")})`;
-                        const hex = ('#' + toHex(color[0]) + toHex(color[1]) + toHex(color[2])).toUpperCase();
+                        const hex = ('#' + toHex(color[0]) + toHex(color[1]) + toHex(color[2]));
                         return <ListItem key={index} rgb={rgb} hex={hex} />
                     })
                     

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Poppins:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root {
   --border: #363636;
   --background: #22223b;
@@ -61,7 +62,4 @@ header .input {
   gap: 1rem;
 }
 
-.paletteColor {
-  width: 20rem;
-  height: 20rem;
-}
+
