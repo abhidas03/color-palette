@@ -81,3 +81,9 @@
   text-align: center;
   
 }
+
+.socials {
+  position: absolute;
+  right: 25px;
+}
+.socials a:visited {color:white;} 

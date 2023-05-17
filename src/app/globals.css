@@ -30,7 +30,7 @@ header {
   background: var(--foreground);
   box-shadow: 0 3px 6px rgba(255, 255, 255, 0.2);
   border-bottom: 2px solid var(--border);
-
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;

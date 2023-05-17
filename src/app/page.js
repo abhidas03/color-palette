@@ -3,9 +3,11 @@ import styles from './page.module.css'
 import ImageDisplay from '@/components/imageDisplay'
 import ColorDisplay from '@/components/colorDisplay'
 import ColorThief from 'colorthief'
+
 import { useState } from 'react'
 
 const imageIcon = <i className="fa-solid fa-image"></i>
+const githubIcon = <i className="fa-brands fa-github"></i>
 export default function Home() {
 
   const [uploadedImage, setUploadedImage] = useState(null);
@@ -37,7 +39,11 @@ export default function Home() {
           <label htmlFor='file'>{imageIcon} Upload your Image</label>
           <input type='file' id='file' hidden onChange={uploadImage}/>
         </div>
+        <div className={styles.socials}>
+          <a href="https://github.com/abhidas03" target="_blank" rel="noreferrer noopener"><i class="fa-brands fa-github"></i></a>
+        </div>
       </header>
+
       <main className={styles.main}>
         <ImageDisplay uploadedImage={uploadedImage} />
         <ColorDisplay colorPalette={colorPalette}/>
