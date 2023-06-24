@@ -3,11 +3,9 @@ import styles from './page.module.css'
 import ImageDisplay from '@/components/imageDisplay'
 import ColorDisplay from '@/components/colorDisplay'
 import ColorThief from 'colorthief'
-import CatButton from '@/components/catButton'
 import { useState } from 'react'
 
 const imageIcon = <i className="fa-solid fa-image"></i>
-const githubIcon = <i className="fa-brands fa-github"></i>
 export default function Home() {
 
   const [uploadedImage, setUploadedImage] = useState(null);
