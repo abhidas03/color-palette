@@ -3,7 +3,7 @@ import styles from './page.module.css'
 import ImageDisplay from '@/components/imageDisplay'
 import ColorDisplay from '@/components/colorDisplay'
 import ColorThief from 'colorthief'
-
+import CatButton from '@/components/catButton'
 import { useState } from 'react'
 
 const imageIcon = <i className="fa-solid fa-image"></i>
@@ -45,7 +45,7 @@ export default function Home() {
       </header>
 
       <main className={styles.main}>
-        <ImageDisplay uploadedImage={uploadedImage} />
+        <ImageDisplay uploadedImage={uploadedImage} setUploadedImage={setUploadedImage} setColorPalette={setColorPalette}/>
         <ColorDisplay colorPalette={colorPalette}/>
       </main>
     </>
