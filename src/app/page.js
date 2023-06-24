@@ -4,6 +4,7 @@ import ImageDisplay from '@/components/imageDisplay'
 import ColorDisplay from '@/components/colorDisplay'
 import ColorThief from 'colorthief'
 import { useState } from 'react'
+import CatButton from '@/components/catButton'
 
 const imageIcon = <i className="fa-solid fa-image"></i>
 export default function Home() {
@@ -34,6 +35,7 @@ export default function Home() {
       <header>
         <h1>Palette Generator</h1>
         <div className='input'>
+          <CatButton setUploadedImage={setUploadedImage} setColorPalette={setColorPalette}/>
           <label htmlFor='file'>{imageIcon} Upload your Image</label>
           <input type='file' id='file' hidden onChange={uploadImage}/>
         </div>
@@ -43,7 +45,7 @@ export default function Home() {
       </header>
 
       <main className={styles.main}>
-        <ImageDisplay uploadedImage={uploadedImage} setUploadedImage={setUploadedImage} setColorPalette={setColorPalette}/>
+        <ImageDisplay uploadedImage={uploadedImage}/>
         <ColorDisplay colorPalette={colorPalette}/>
       </main>
     </>
