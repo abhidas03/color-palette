@@ -1,6 +1,6 @@
 import './globals.css'
 export const metadata = {
-  title: 'Color Finder',
+  title: 'Palette Generator',
   description: 'Generates color palette based on uploaded image.',
 }
 
